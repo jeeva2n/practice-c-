@@ -8,14 +8,11 @@ namespace practice
 {
     public class Test1
     {
-        public int Marks { get; set; } = 55;
+        private int Marks { get; set; } = 55;
+        public string Name { get; set; } = "abcd";
 
         public int marks
         {
-            get
-            {
-                return Marks;
-            }
             set
             {
                 if (value >= 35)
@@ -23,6 +20,12 @@ namespace practice
                 else
                     Console.WriteLine("failed");
             }
+
+            get
+            {
+                return Marks;
+            }
+            
         }
     }
 }

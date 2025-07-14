@@ -9,14 +9,13 @@ class Program
 {
     public static void Main(string[] args)
     {
-        //properties
+        //properties  
         Test1 properties = new Test1();
-        properties.marks = 35;
         properties.marks = 22;
         Console.WriteLine(properties.marks);
+        Console.WriteLine();
 
-
-        //inheritance
+        //inheritance  
         Dog d = new Dog();
         d.name = "abc dog";
         d.age = 1;
@@ -39,12 +38,13 @@ class Program
         Anotherpeackok ap = new Anotherpeackok();
         ap.parts("Female", 2, 22);
         ap.showliving();
+        Console.WriteLine();
 
+        //List
         Company example = new Company();
+        example.name = "Google";
         Console.WriteLine(example.name);
 
-
-        //List 
         List<Company> com = new List<Company>
         {
             new Company
@@ -67,17 +67,25 @@ class Program
                 description="eee",
                 age=3,
             },
+            new Company
+            {
+                name = "D type",
+                description="ece",
+                age=4,
+            }
         };
 
         foreach (var details in com)
         {
             Console.WriteLine(details.name);
             Console.WriteLine(details.description);
+            Console.WriteLine(details.age);
         }
 
+        Console.WriteLine();
 
 
-        //swap
+        //swap  
         int a = 10;
         int b = 20;
 
@@ -85,12 +93,13 @@ class Program
         Console.WriteLine($"a = {a}, b = {b}");
 
         Test4.swap(a, b);
+        Console.WriteLine();
 
 
 
-        //patterns -> for
+        //patterns -> for  
         int rows = 3;
-        int stars = 1; 
+        int stars = 1;
 
         for (int i = 1; i <= rows; i++)
         {
@@ -100,11 +109,12 @@ class Program
             }
 
             Console.WriteLine();
-            stars += 2; 
+            stars += 2;
         }
+        Console.WriteLine();
 
 
-        //composition method
+        //composition method  
         Elecricalcar ec = new Elecricalcar("lastest model", 2022, "Black", "Ford");
         ec.batterytime();
         ec.isfastcharging();
@@ -120,10 +130,7 @@ class Program
         ct.combustiontypefeature();
         Console.WriteLine();
 
-
-
-        //Abstract class
-
+        //Abstract class  
         AbstractCar ac;
         ac = new Ford();
         ac.year = 2020;
@@ -132,12 +139,26 @@ class Program
         ac = new Toyota();
         ac.year = 2021;
         ac.Start();
+        
 
         ac = new Benz();
         ac.year = 2022;
         ac.Start();
+
+        // Interface  
+        BMW mybmw = new BMW();
+        mybmw.carname();
+        mybmw.carcolor();
+        mybmw.year();
+        Console.WriteLine();
+
+
+        // Multiple Interface
+        Bike bike = new Bike();
+        bike.bikename();
+        bike.bikemodel();
     }
-};
+}
 
 
 

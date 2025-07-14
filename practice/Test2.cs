@@ -23,7 +23,7 @@ namespace practice
     {
         public int age;
         public string name="";
-
+                        
         public virtual void Speak()
         {
             Console.WriteLine("Animal can make sound");
@@ -39,7 +39,7 @@ namespace practice
     {
         public override void Speak()
         {
-            Console.WriteLine("the dog is barking");
+            Console.WriteLine("the Dog is barking");
         }
     }
 

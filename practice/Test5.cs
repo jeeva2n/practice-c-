@@ -12,14 +12,7 @@ namespace practice
         public string carmodel;
         public int year;
         public string color;
-        public string company;
-
-        //private string Electric { get; set; }
-        //private string Hybrid { get; set; }
-        //private string Combustion { get; set; }
-
-
-       
+        public string company;       
     }
 
     public class Elecricalcar : Car
